@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astro y Cometa · Cuentos para dormir</title>
+<meta name="description" content="Astro, un gusanito azul que ama los libros, y Cometa, un pajarito de bufanda lila, viajan por los planetas en cuentos para antes de dormir.">
+<meta property="og:title" content="Astro y Cometa · Cuentos para dormir">
+<meta property="og:description" content="Un viaje de colores por los planetas, para leer antes de dormir.">
+<meta property="og:image" content="https://astroycometa.com/img/og.jpg">
+<meta property="og:url" content="https://astroycometa.com/">
+<meta name="theme-color" content="#1b1f4a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--noche:#1b1f4a;--noche2:#2a2f6b;--luna:#f6e7b0;--lila:#a98bd6;--hoja:#8fb86a;--texto:#f4f1ea;--suave:#c9c6e0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Nunito,system-ui,sans-serif;color:var(--texto);background:radial-gradient(ellipse at top,var(--noche2),var(--noche) 60%);min-height:100vh;line-height:1.6}
+  .estrellas{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(1.5px 1.5px at 12% 18%,#fff8 50%,transparent),radial-gradient(1px 1px at 78% 12%,#fff9 50%,transparent),radial-gradient(1.5px 1.5px at 62% 38%,#fff6 50%,transparent),radial-gradient(1px 1px at 25% 70%,#fff7 50%,transparent),radial-gradient(1.5px 1.5px at 88% 64%,#fff8 50%,transparent),radial-gradient(1px 1px at 45% 88%,#fff6 50%,transparent)}
+  main{position:relative;max-width:980px;margin:0 auto;padding:48px 16px 32px;display:grid;gap:40px;grid-template-columns:1fr;align-items:center}
+  @media(min-width:760px){main{grid-template-columns:1.1fr .9fr;padding-top:80px}}
+  h1{font-family:Fredoka,Nunito,sans-serif;font-weight:600;font-size:clamp(2.4rem,7vw,3.6rem);line-height:1.05;color:var(--luna)}
+  h1 span{color:var(--lila)}
+  .sub{margin-top:14px;font-size:1.15rem;color:var(--suave);max-width:34ch}
+  .etiqueta{display:inline-block;margin-bottom:18px;padding:6px 14px;border-radius:999px;background:#ffffff14;border:1px solid #ffffff26;font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;color:var(--luna)}
+  .boton{display:inline-block;margin-top:28px;padding:14px 26px;border-radius:14px;background:var(--luna);color:var(--noche);font-weight:700;text-decoration:none;font-size:1.05rem;transition:transform .15s}
+  .boton:hover{transform:translateY(-2px)}
+  figure img{width:100%;height:auto;max-width:420px;display:block;margin:0 auto;border-radius:22px;box-shadow:0 20px 60px #0008}
+  footer{position:relative;text-align:center;padding:24px 16px 40px;color:var(--suave);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="estrellas" aria-hidden="true"></div>
+<main>
+  <section>
+    <p class="etiqueta">Muy pronto</p>
+    <h1>Astro <span>y</span> Cometa</h1>
+    <p class="sub">Un gusanito azul que ama los libros y un pajarito con bufanda lila viajan por los planetas en cuentos para antes de dormir.</p>
+    <a class="boton" href="/planetas">Ver los extras del libro</a>
+  </section>
+  <figure>
+    <img src="/img/astro-cometa.jpg" width="720" height="1080" alt="Astro, un gusanito azul con anteojos, lee un libro en la rama de un árbol junto a Cometa, un pajarito verde y amarillo con bufanda.">
+  </figure>
+</main>
+<footer>© 2026 Astro y Cometa</footer>
+</body>
+</html>
