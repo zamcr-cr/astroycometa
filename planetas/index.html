@@ -9,6 +9,9 @@
 <meta property="og:description" content="Un ritual de relajación y conversación para antes de dormir.">
 <meta property="og:image" content="https://astroycometa.com/img/og.jpg">
 <meta property="og:url" content="https://astroycometa.com/planetas">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#1b1f4a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +32,17 @@
   .astro{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:Fredoka,sans-serif;font-weight:600;font-size:.8rem;color:#1b1f4a}
   li strong{color:var(--luna)}
   .luna{background:#d9dce3}.marte{background:#e07a5f}.jupiter{background:#f2a65a}.saturno{background:#e9c46a}.urano{background:#7fd1c7}.neptuno{background:#4a6fd6;color:#fff}.pluton{background:#f4c7d2}
-  .pronto{text-align:center}
-  .pronto p{color:var(--suave)}
-  .chip{display:inline-block;margin-top:14px;padding:6px 14px;border-radius:999px;background:#a98bd633;border:1px solid var(--lila);color:var(--texto);font-weight:700;font-size:.85rem}
+  .descargas{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:620px){.descargas{grid-template-columns:1fr 1fr}}
+  .dl{display:block;padding:18px 18px 16px;border-radius:16px;background:#ffffff14;
+      border:1px solid var(--lila);text-decoration:none;color:var(--texto);transition:background .15s,transform .15s}
+  .dl:hover{background:#a98bd62e;transform:translateY(-2px)}
+  .dl strong{display:block;font-family:Fredoka,sans-serif;font-weight:600;font-size:1.12rem;color:var(--luna);margin-bottom:6px}
+  .dl span{display:block;font-size:.94rem;line-height:1.5;color:var(--suave)}
+  .dl em{display:block;margin-top:10px;font-style:normal;font-size:.78rem;letter-spacing:.06em;
+         text-transform:uppercase;color:var(--lila);font-weight:700}
   footer{text-align:center;padding-top:36px;color:var(--suave);font-size:.85rem}
-  @media print{body{background:#fff;color:#111}h1,h2,li strong{color:#1b1f4a}.intro,.nota,.pronto p{color:#444}section{border-color:#ccc;background:none}.inicio,.pronto,footer{display:none}}
+  @media print{body{background:#fff;color:#111}h1,h2,li strong{color:#1b1f4a}.intro,.nota,.pronto p{color:#444}section{border-color:#ccc;background:none}.inicio,.descargas,footer{display:none}}
 </style>
 </head>
 <body>
@@ -70,10 +79,21 @@
     </ol>
   </section>
 
-  <section class="pronto">
-    <h2>Muy pronto para descargar</h2>
-    <p>La tarjeta ilustrada para imprimir y la página para colorear «Mi jardín de planetas».</p>
-    <span class="chip">En preparación</span>
+  <section aria-labelledby="descargas">
+    <h2 id="descargas">Para imprimir en casa</h2>
+    <p class="nota">Dos PDF en tamaño carta, gratis y sin registro.</p>
+    <div class="descargas">
+      <a class="dl" href="/descargas/tarjeta-pausas-y-preguntas.pdf" download>
+        <strong>La tarjeta de las pausas</strong>
+        <span>Las 7 pausas de un lado y las 7 preguntas del otro. Imprímela a doble cara, recórtala y déjala en la mesita de noche.</span>
+        <em>PDF · 2 páginas · carta</em>
+      </a>
+      <a class="dl" href="/descargas/mi-jardin-de-planetas.pdf" download>
+        <strong>Mi jardín de planetas</strong>
+        <span>La última escena del cuento para colorear: los siete árboles, Astro y Cometa.</span>
+        <em>PDF · 1 página · carta</em>
+      </a>
+    </div>
   </section>
 
   <footer>© 2026 Astro y Cometa</footer>
